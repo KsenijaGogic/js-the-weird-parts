@@ -44,3 +44,17 @@ Within the exection contexts created when running your code, the base one is the
 The global execution context (via the JavaScript engine) creates two things for you each time your code runs:
 1. Global Object
 2. `this`, "a special variable for you"
+
+Note that whenever you run a JavaScript file, even if empty, an execution context is created. In the case of the execution context in a browser, the global execution context created is the window, which can also be access via the keyword `this`.
+
+When we refer to something as *global*, in JavaScript, we mean something that's *not in a function.*
+
+In JavaScript, when you create variables and functions outside of functions, those get attached to the global object.
+
+*The important thing to note here is that there are all these other things, in the global execution context _that you didn't write._*
+
+
+
+
+
+
