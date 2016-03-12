@@ -47,11 +47,19 @@ The global execution context (via the JavaScript engine) creates two things for 
 
 Note that whenever you run a JavaScript file, even if empty, an execution context is created. In the case of the execution context in a browser, the global execution context created is the window, which can also be access via the keyword `this`.
 
-When we refer to something as *global*, in JavaScript, we mean something that's *not in a function.*
-
-In JavaScript, when you create variables and functions outside of functions, those get attached to the global object.
+When we refer to something as *global*, in JavaScript, we mean something that's *not in a function.* In JavaScript, when you create variables and functions outside of functions, those get attached to the global object.
 
 *The important thing to note here is that there are all these other things, in the global execution context _that you didn't write._*
+
+## Section 3, Lecture 9
+### Exectution Context, Creation & Hoisting
+When the global context is created, what's created, and in memory are you Global Object, `this`, the Outer Environment and memory space is set up for Variables and Functions -- this is called hoisting. What this means is that, before your code executes line-by-line, JavaScript has set aside memory for each variable and function you've defined.
+
+So, these functions and variables exist in memory. But when the code exectues line-by-line, the entirety of a function is placed into memory, while with variables, on setup, all variables are set to `undefined`. It isn't until the code exectutes top-down, that defined values as assigned.
+
+tl;dr the JavaScript engine creates the global context, as well as sets functions and variables to memory space. Functions are assigned in their intirety, while variables assigned a value of `undefined` until the code executes.
+
+
 
 
 
