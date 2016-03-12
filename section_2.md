@@ -1,7 +1,7 @@
-#JavaScript, The Weird Parts
+# JavaScript, The Weird Parts
 
-##Section 2, Lecture 6
-### Conceptual Aside
+## Section 2, Lecture 6
+### Conceptual Aside - Syntax Parser, Lexical Environments, Execution Contexts
 1. Syntax Parser
 "A program that reads your code, determines what it does, and if its grammar is valid." 
 Programs such as compilers and interpreters that do the process/work of reading your code, and then converts it to something the computer can understand and inerpret. *It's important to note that these intermediate programs affect how your code executes.*
@@ -15,5 +15,32 @@ Lexical -> to do with words or grammar. "A lexical environment exists in program
 
 *"Just remember. It's important," _he says._*
 
-##Section 3, Lecture 6
-### Conceptual Aside
+## Section 3, Lecture 7
+### Conceptual Aside - Name/Value Pairs, Objects
+1. Name/Value Pairs
+"A name which maps to a unique value." The name can be defined more than once, but it can only have *one value in any given _context._* "Remmeber we're talking about execution context, so in any particular execution context, a name can only *exist* and be *defined* with one value."
+```
+Address = '100 Main St.'
+```
+2. Objects
+"A collection of Name/Value Pairs."
+```
+Address:
+    {
+        Street: 'Main',
+        Number: 100,
+        Apartment: {
+            Floor: 3,
+            Number: 301
+        }
+    }
+```
+Address is still the name of this object, but now, the value of it become a collection.
+
+## Section 3, Lecture 9
+### Global Environment & Global Object
+Within the exection contexts created when running your code, the base one is the global execution context/environment. "It has a couple of special things that come along for the ride." It's *global* because it's accessible everywhere to everything in your code.
+
+The global execution context (via the JavaScript engine) creates two things for you each time your code runs:
+1. Global Object
+2. `this`, "a special variable for you"
