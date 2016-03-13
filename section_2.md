@@ -1,5 +1,5 @@
 # JavaScript, The Weird Parts
-## Section 2, Exectution Contexts and Lexical Environment
+Section 2, Execution Contexts and Lexical Environment
 
 ----
 
