@@ -1,8 +1,12 @@
-b();
-console.log(a);
-
-var a = 'hello world';
-
-function b() {
-    console.log('hello');
+function a() {
+  
+  function b() {
+    console.log(myVar);   
+  }
+  
+  var myVar = 2;  
+  b();
 }
+
+var myVar = 1;
+a();
